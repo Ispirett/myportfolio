@@ -31,7 +31,7 @@
         <a class="nav-link" href="#">Resume</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Blog</a>
+        <a class="nav-link active"  href="#">Blog</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="https://twitter.com/ispirett">Twitter</a>
@@ -40,55 +40,30 @@
   </div>
 </nav>
     </header>
-
+   <!-- body -->
     <main role="main">
-
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Welcome to my page i'm Isaac</h1>
-          <p class="lead text-muted">Im a Full stack developer and proud to be,
-              I enjoy writing code and creating solutions to solve my client's conundrums.
-          I have done projects in node.js, react, react native, android, ios and python. feel free to email me! or msg me on twitter with any questions.</p>
-          <p>
-            <a href="mailto:isprett@gmail.com" class="btn btn-primary my-2">Email</a>
-            <a href="#" class="btn btn-secondary my-2">Twitter</a>
-          </p>
-        </div>
-      </section>
-
-      <div class="album py-5 bg-light">
-        <div class="container">
-          <!-- jobs section -->
-          <div class="row">
-          <!-- iterate through all jobs -->
-            {% for job in my_jobs.all %}
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="{{ job.image.url}}"/>
-                <div class="card-body">
-                 <h4 style="color: cadetblue" class="h4">{{ job.title }}</h4>
-                  <p class="card-text">{{ job.summary}}</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <a href="{{ job.image.url }}"><button type="button" class="btn btn-info">View<</button></a>
-                      <button style="color: white" type="button" class="btn btn-warning">Contact</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
+      <div class="container">
+     <h1 style="color: cadetblue" class="text-center pt-3 h1 ">Welcome! to MyBlog</h1>
+        <br/>
+        <br/>
+      <h2 style="color: goldenrod" class="h2 "> Recent Posts </h2>
+          <hr/>
+          {% for blog in listblogs.all %}
+              <a href="#"> <h4 style="color: cadetblue">{{ blog.title }} </h4> </a>
+              <h6 class="h6 font-weight-light">{{ blog.publication_date }}</h6>
+              <hr/>
+              <br>
+              <div  class="card" style="width: 18rem">
+              <img  class="card-img-top pt-2" src="{{ blog.image.url }}" alt="image">
+              <hr/>
+              <div class="card-body" >
+              <p class="font-italic card-text">{{ blog.post }}</p>
               </div>
-            </div>
-            {% endfor %}
+              </div>
+              <hr/>
+          {% endfor %}
 
-
-
-
-
-
-          </div>
-        </div>
       </div>
-
     </main>
 
     <footer class="text-muted">
