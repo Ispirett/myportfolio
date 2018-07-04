@@ -20,5 +20,7 @@ from django.conf.urls.static import static
 from blog import views
 
 urlpatterns = [
-    path('', views.all_blogs, name="all_blogs")
+    path('', views.all_blogs, name="all_blogs"),
+    # add int url for id for blogs
+    path('<int:blog_id>/',views.posts, name='posts'),
 ]

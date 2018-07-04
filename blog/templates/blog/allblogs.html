@@ -50,14 +50,14 @@
           <hr/>
           {% for blog in listblogs.all %}
               <a href="#"> <h4 style="color: cadetblue">{{ blog.title }} </h4> </a>
-              <h6 class="h6 font-weight-light">{{ blog.publication_date }}</h6>
+              <h6 class="h6 font-weight-light">{{ blog.date_only }}</h6>
               <hr/>
               <br>
               <div  class="card" style="width: 18rem">
               <img  class="card-img-top pt-2" src="{{ blog.image.url }}" alt="image">
               <hr/>
               <div class="card-body" >
-              <p class="font-italic card-text">{{ blog.post }}</p>
+              <p class="font-italic card-text">{{ blog.summary }}</p>
               </div>
               </div>
               <hr/>
