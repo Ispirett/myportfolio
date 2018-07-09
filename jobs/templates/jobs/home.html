@@ -1,111 +1,158 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ispire Enterprises</title>
+    <link rel="stylesheet" href="{% static 'jobs/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'jobs/css/skeleton.css' %}">
+    <link rel="stylesheet" href="{% static 'jobs/css/custom.css' %}">
+</head>
+<body>
+<header id="header" class="header">
+    <div class="container">
+        <div class="row">
+            <div class="four columns">
+                <img src="{% static '/jobs/heating-icon.png' %}" id="logo">
+            </div>
+            <!-- <div class="two columns u-pull-right">
+                <ul>
+                    <li class="submenu">
+                            <img src= "" id="img-cart">
+                            <div id="shopping-cart">
+                                    <table id="cart-content" class="u-full-width">
+                                        <thead>
+                                            <tr>
+                                                <th>Image</th>
+                                                <th>Name</th>
+                                                <th>Price</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <img src="" width="120">
+                                                </td>
+                                                <td>HTML5, CSS3, JavaScript for beginners</td>
+                                                <td>$15</td>
+                                                <td>
+                                                    <a href="#" class="remove">X</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                 <td>
+                                                     <img src="" width="120">
+                                                 </td>
+                                                 <td>Cooking Course</td>
+                                                 <td>$15</td>
+                                                 <td>
+                                                     <a href="#" class="remove">X</a>
+                                                 </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-    <title>Jobs</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-
-    <!-- Custom styles for this template -->
-
-  </head>
-
-  <body>
-<!-- header -->
-    <header >
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="{% url 'home' %}">Isaac Browne</a>
-  <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto ">
-      <li class="nav-item ">
-        <a class="nav-link" href="#">Resume</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'all_blogs' %}">Blog</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://twitter.com/ispirett">Twitter</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+                                    <a href="#" id="clear-cart" class="button u-full-width">Clear Cart</a>
+                            </div>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+    </div>
     </header>
 
-    <main role="main">
 
-      <section class="jumbotron text-center">
+    <div id="hero">
         <div class="container">
-          <h1 class="jumbotron-heading">Welcome to my page i'm Isaac</h1>
-          <p class="lead text-muted">Im a Full stack developer and proud to be,
-              I enjoy writing code and creating solutions to solve my client's conundrums.
-          I have done projects in node.js, react, react native, android, ios and python. feel free to email me! or msg me on twitter with any questions.</p>
-          <p>
-            <a href="mailto:isprett@gmail.com" class="btn btn-primary my-2">Email</a>
-            <a href="#" class="btn btn-secondary my-2">Twitter</a>
-          </p>
-        </div>
-      </section>
-
-      <div class="album py-5 bg-light">
-        <div class="container">
-          <!-- jobs section -->
-          <div class="row">
-          <!-- iterate through all jobs -->
-            {% for job in my_jobs.all %}
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="{{ job.image.url}}"/>
-                <div class="card-body">
-                 <h4 style="color: cadetblue" class="h4">{{ job.title }}</h4>
-                  <p class="card-text">{{ job.summary}}</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <a href="{{ job.image.url }}"><button type="button" class="btn btn-info">View<</button></a>
-                      <button style="color: white" type="button" class="btn btn-warning">Contact</button>
+            <div class="row">
+                    <div class="six columns">
+                        <div class="hero-content">
+                                <h2 id="learn">Welcome to Ispire Enterprise</h2>
+                                <p class="tagline"> Have a new Idea that needs Software we are hear for you the whole Step of the Day.</p>
+                                <form action="#" id="search" method="post" class="form">
+                                    <input class="u-full-width" type="text" placeholder="What Do You Want To Learn? " id="search-course">
+                                    <input type="submit" id="submit-search-course" class="submit-search-course">
+                                </form>
+                        </div>
                     </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-bar">
+        <div class="container">
+            <div class="row">
+                    <div class="four columns icon icon1">
+                        <p>CUSTOMISED SOFTWARE<br>
+                        Tailored solutions as opposed to using shelf products. Such customised systems can…</p>
+                    </div>
+                    <div class="four columns icon icon2">
+                        <p>APP DEVELOPMENT<br>
+                        Includes ios and android development</p>
+                    </div>
+                    <div class="four columns icon icon3">
+                        <p>Website Development <br>
+                        Customized websites and web apps to suite you company or personal needs</p>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="courses-list" class="container">
+        <h1 id="heading" class="heading">Some of our work</h1>
+        <div class="row">
+            {% for job in my_jobs.all %}
+            <div class="four columns">
+                <div class="card">
+                    <img src="{{ job.image.url}}" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>{{ job.title }}</h4>
+                        <p>{{ job.summary}}</p>
+                        <p class="price">  <span class="u-pull-right "></span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="1">Add to Cart</a>
+                    </div>
+                </div> <!--.card-->
             </div>
             {% endfor %}
+        </div> <!--.row-->
 
 
+        <div class="row">
+        </div> <!--.row-->
+        <div class="row">
+        </div> <!--.row-->
 
+    </div>
 
-
-
-          </div>
+    <footer id="footer" class="footer">
+        <div class="container">
+            <!--<div class="row">
+                    <div class="four columns">
+                            <nav id="primary" class="menu">
+                                <a class="link" href="#">For Business</a>
+                                <a class="link" href="#">Become an Instructor</a>
+                                <a class="link" href="#">Mobile Applications</a>
+                                <a class="link" href="#">Support</a>
+                                <a class="link" href="#">Help</a>
+                            </nav>
+                    </div>
+                    <div class="four columns">
+                            <nav id="secondary" class="menu">
+                                <a class="link" href="#">About Us</a>
+                                <a class="link" href="#">Work with us</a>
+                                <a class="link" href="#">Blog</a>
+                            </nav>
+                    </div>
+            </div>-->
+            <p style="color: #0FA0CE"> CopyRight &copy;  Ispirett Enterprises {% now 'Y' %}</p>
         </div>
-      </div>
-
-    </main>
-
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p> CopyRight &copy;  Isaac Browne {% now 'Y' %}</p>
-
-      </div>
     </footer>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  </body>
+    <script src="js/app.js"></script>
+
+</body>
 </html>
