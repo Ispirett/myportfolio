@@ -5,3 +5,9 @@ def home(request):
 
     my_jobs = Job.objects
     return render(request, 'jobs/home.html', {'my_jobs': my_jobs})
+
+
+def about(request):
+
+    my_jobs = Job.objects
+    return render(request, 'jobs/about.html', {'my_jobs': my_jobs})

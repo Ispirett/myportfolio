@@ -9,15 +9,48 @@
     <link rel="stylesheet" href="{% static 'jobs/css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'jobs/css/skeleton.css' %}">
     <link rel="stylesheet" href="{% static 'jobs/css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'jobs/css/navbar.css' %}">
+
+
 </head>
 <body>
-<header id="header" class="header">
-    <div class="container">
+<!-- Nav bar -->
+   <nav class="navbar">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+        <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+        </svg>
+      </a>
+    </span>
+
+    <ul class="navbar-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="#">Services</a></li>
+      <a href="{% url 'all_blogs' %}">Blog</a>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div id="side-menu" class="side-nav">
+    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <a href="#">Home</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="#">Services</a>
+
+    <a href="#">Contact</a>
+  </div>
+
+
+
+<!--<header id="header" class="header">
+   <div class="container">
         <div class="row">
-            <div class="four columns">
-                <img src="{% static '/jobs/heating-icon.png' %}" id="logo">
-            </div>
-            <!-- <div class="two columns u-pull-right">
+
+            <div class="two columns u-pull-right">
                 <ul>
                     <li class="submenu">
                             <img src= "" id="img-cart">
@@ -59,10 +92,10 @@
                             </div>
                     </li>
                 </ul>
-            </div> -->
+            </div>
         </div>
     </div>
-    </header>
+    </header>-->
 
 
     <div id="hero">
@@ -70,10 +103,10 @@
             <div class="row">
                     <div class="six columns">
                         <div class="hero-content">
-                                <h2 id="learn">Welcome to Ispire Enterprise</h2>
-                                <p class="tagline"> Have a new Idea that needs Software we are hear for you the whole Step of the Day.</p>
+                            <h2 id="learn"> <span style="color: #1EAEDB">Ispire</span> Software Solutions</h2>
+                                <p class="tagline"> Have a new Idea that needs Software we are here for you the whole Step of the way!</p>
                                 <form action="#" id="search" method="post" class="form">
-                                    <input class="u-full-width" type="text" placeholder="What Do You Want To Learn? " id="search-course">
+                                    <input class="u-full-width" type="text" placeholder="search ideas " id="search-course">
                                     <input type="submit" id="submit-search-course" class="submit-search-course">
                                 </form>
                         </div>
@@ -87,7 +120,7 @@
             <div class="row">
                     <div class="four columns icon icon1">
                         <p>CUSTOMISED SOFTWARE<br>
-                        Tailored solutions as opposed to using shelf products. Such customised systems can…</p>
+                        Tailored solutions as opposed to using shelf products. </p>
                     </div>
                     <div class="four columns icon icon2">
                         <p>APP DEVELOPMENT<br>
@@ -106,14 +139,14 @@
         <h1 id="heading" class="heading">Some of our work</h1>
         <div class="row">
             {% for job in my_jobs.all %}
-            <div class="four columns">
+            <div class="four columns" >
                 <div class="card">
                     <img src="{{ job.image.url}}" class="course-image u-full-width">
                     <div class="info-card">
                         <h4>{{ job.title }}</h4>
                         <p>{{ job.summary}}</p>
                         <p class="price">  <span class="u-pull-right "></span></p>
-                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="1">Add to Cart</a>
+                        <a href="{{ job.get_link }}" class="u-full-width button-primary button input add-to-cart" data-id="1">View</a>
                     </div>
                 </div> <!--.card-->
             </div>
@@ -149,10 +182,23 @@
                     </div>
             </div>-->
             <p style="color: #0FA0CE"> CopyRight &copy;  Ispirett Enterprises {% now 'Y' %}</p>
+            <a href="#"><button type="button" style="color: #ffffff; background: #0FA0CE; float: right">Back to top</button></a>
         </div>
     </footer>
 
     <script src="js/app.js"></script>
+      <script>
+
+    function openSlideMenu(){
+      document.getElementById('side-menu').style.width = '250px';
+      document.getElementById('main').style.marginLeft = '250px';
+    }
+
+    function closeSlideMenu(){
+      document.getElementById('side-menu').style.width = '0';
+      document.getElementById('main').style.marginLeft = '0';
+    }
+    </script>
 
 </body>
 </html>
