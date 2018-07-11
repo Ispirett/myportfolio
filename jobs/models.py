@@ -7,9 +7,5 @@ class Job(models.Model):
     title = models.CharField(max_length=40)
     summary = models.CharField(max_length=200)
 
-    def get_link(self):
-        try:
-            if self.link == True:
-                 return self.link
-        except ConnectionError:
-           pass
+    def __str__(self):
+        return self.title
