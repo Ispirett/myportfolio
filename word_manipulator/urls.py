@@ -14,19 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+from django.urls import path
 
-from django.contrib import admin
-from django.urls import include, path
-from django.conf import settings
 from django.conf.urls.static import static
-import jobs.views
+from word_manipulator import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', jobs.views.home, name='home'),
-    path('blog/', include('blog.urls')),
-    path('about/', jobs.views.about, name='about'),
-    path('wordmaniplatior/',include('word_manipulator.urls'))
+    path('', views.word_change, name="word_change"),
+    path('changeword',views.change_word,name="change_word")
 
-
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
