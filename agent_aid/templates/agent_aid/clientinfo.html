@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <title>{{ client_info.NAME }}</title>
+</head>
+<body>
+<div class="container">
+<div class="card">
+    <a href="{{ client_info.PDF.url }}"><img class="card-img-top" src="http://www.droghedacbs.ie/wp-content/uploads/2016/12/pdf-logo.png" alt="Card image cap"></a>
+    <div class="card-body">
+      <h5 class="card-title">{{ client_id.NAME }}</h5>
+
+        <p class="card-text">   <span style="color: #0086b3">ADDRESS</span>        :{{ clientinfo.ADDRESS }}</p>
+          <p class="card-text"> <span style="color: #0086b3">CONTACT</span>      :{{ client_info.CONTACT  }}</p>
+          <p class="card-text"> <span style="color: #0086b3">OCCUPATION</span>   :{{ client_info.OCCUPATION  }}</p>
+          <p class="card-text"> <span style="color: #0086b3">CLIENT_NO </span>    :{{ client_info.CLIENT_NO  }}</p>
+          <p class="card-text"> <span style="color: #0086b3">POLICY_NO</span>       :{{ client_info.POLICY_NO  }}</p>
+          <p class="card-text"> <span style="color: #0086b3">POLICY_TYPE </span>     :{{ client_info.POLICY_TYPE }}</p>
+          <p class="card-text"> <span style="color: #0086b3">POLICY_PROPERTIES</span>    :{{ client_info.POLICY_PROPERTIES }}</p>
+          <p class="card-text"> <span style="color: #0086b3">ISSUE_DATE</span>    :{{ client_info.ISSUE_DATE }}</p>
+          <p class="card-text"> <span style="color: #0086b3">REVIEW_DATE </span>    :{{ client_info.REVIEW_DATE  }}</p>
+          <p class="card-text"> <span style="color: #0086b3">DOB </span>           :{{ client_info.DOB }}</p>
+          <p class="card-text"> <span style="color: #0086b3">PREMIUM_AMOUNT</span>   :{{ client_info.PREMIUM_AMOUNT }}</p>
+          <p class="card-text"> <span style="color: #0086b3">MODE_OF_PAYMENT</span>  :{{ client_info.MODE_OF_PAYMENT }}</p>
+
+
+
+
+
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">{% now '"jS F Y H:i"' %}</small>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

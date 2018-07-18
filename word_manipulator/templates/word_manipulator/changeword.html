@@ -10,9 +10,13 @@
 </head>
 <body>
     <div class="container">
-    <h1> Change word </h1>
-    <p> {{ useroldword }}</p>
-    <p>  {{ doc }}</p>
+        <h1> Change word </h1>
+            {% for user in users.all %}
+            <p> {{ user.old_name}}</p>
+            <p> {{ user.new_name}} </p>
+            <p>  </p>
+            {% endfor %}
+
     </div>
 
 

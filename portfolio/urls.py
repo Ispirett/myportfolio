@@ -26,7 +26,8 @@ urlpatterns = [
     path('', jobs.views.home, name='home'),
     path('blog/', include('blog.urls')),
     path('about/', jobs.views.about, name='about'),
-    path('wordmaniplatior/',include('word_manipulator.urls'))
+    path('wordmaniplator/',include('word_manipulator.urls')),
+    path('agentaid/',include('agent_aid.urls')),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
