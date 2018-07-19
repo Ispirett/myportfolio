@@ -3,6 +3,7 @@ from .forms import ClientForm
 from .models import ClientsDatabase
 from django.http import HttpResponseRedirect
 from  .models import ClientsDatabase
+from django.db.models import fields
 # Create your views here.
 
 
@@ -38,5 +39,6 @@ def clients_entry (request):
 
 
 def clients_id(request, client_id):
+
     client_info = get_object_or_404(ClientsDatabase, pk=client_id)
     return render(request, 'agent_aid/clientinfo.html', {'client_info': client_info})
