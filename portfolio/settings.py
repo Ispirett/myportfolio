@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts.apps.AccountsConfig',
     'agent_aid.apps.AgentAidConfig',
     'word_manipulator.apps.WordManipulatorConfig',
     'blog.apps.BlogConfig',

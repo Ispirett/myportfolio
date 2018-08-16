@@ -38,9 +38,11 @@
 
 
 
+const navigation = document.querySelector('#pContainer');
 
+let element = navigation.children[0].children;
 
-
+console.log(element);
 
 
 
@@ -52,7 +54,7 @@
 
 
 const products2 = document.querySelectorAll('#pContainer option:nth-child(9)');
-     console.log(products2);
+
 
 
 
@@ -219,7 +221,7 @@ const commission = (product) => {
 
     let answer = com / product / 12;
     document.getElementById('userinput').value = Math.round(answer);
-    console.log(answer);
+
 
 
  };

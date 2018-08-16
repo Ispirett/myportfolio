@@ -1,0 +1,42 @@
+{% extends 'accounts/base.html' %}
+
+
+{% block header %} Sign UP! {% endblock %}
+
+{% block header_two %} TriniOnlineMall {% endblock %}
+{% block banner %}
+ {% if error %}
+ {{ error }}
+ {% endif %}
+{% endblock %}
+
+{% block form %}
+<br/>
+<form  class="container" method="POST"  action="{% url 'signup' %}" >
+{% csrf_token %}
+<h6 class="text-white text-left glyphicon-font"> Username: </h6>
+<input   class="form-control form-control-lg"  type="text" name="username">
+<br/>
+<h6 class="text-white text-left glyphicon-font"> Password: </h6>
+<input   class="form-control form-control-lg"  type="password" name="password">
+<br/>
+<h6 class="text-white text-left glyphicon-font"> Confirm Password: </h6>
+<input  title="Confirm Password:" class="form-control form-control-lg "  type="password" name="password0">
+<br/>
+
+<button type="submit" class="btn btn-success btn-lg btn-block">SignUp!</button>
+
+</form>
+
+{% endblock %}
+
+
+
+
+
+
+
+{% block content %}
+
+
+{% endblock %}
