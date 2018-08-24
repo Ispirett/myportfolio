@@ -6,17 +6,15 @@ from django.contrib import auth
 def signup (request):
     if request.method == 'POST':
         try:
-            if request.POST['password'] == request.POST['password0']:
+            if request.POST['password1'] == request.POST['password2']:
 
-                User.objects.get(username=request.get['username'])
+                User.objects.get(username=request.POST['username'])
             return render(request, "accounts/signup.html", {'error': 'Sorry username is all ready taken!'})
 
         except User.DoesNotExist:
             user = User.objects.create_user(request.POST['username'], password=request.POST['password'])
             auth.login(request, user)
-            redirect('home')
-
-
+            redirect('signup')
     else:
         return render(request, "accounts/signup.html")
 

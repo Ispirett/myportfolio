@@ -29,6 +29,7 @@ urlpatterns = [
     path('wordmaniplator/', include('word_manipulator.urls')),
     path('agentaid/', include('agent_aid.urls')),
     path('accounts/', include('accounts.urls')),
+    path('showcase/', include('showcase.urls')),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
