@@ -7,4 +7,5 @@ urlpatterns = [
 
     # add int url for id for blogs
     path('', views.signup, name="signup"),
+    path('home/', views.home, name="home"),
 ]
