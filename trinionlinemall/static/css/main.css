@@ -1,12 +1,6 @@
 @import url("font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Open+Sans+Condensed:700");
 
-/*
-	TXT by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -1792,7 +1786,7 @@ input, select, textarea {
 		font-weight: 700;
 		text-transform: uppercase;
 		text-decoration: none;
-		background: #b1ddab;
+		background: #dd5251;
 		color: #fff;
 		border: 0;
 		line-height: 1em;
@@ -1814,7 +1808,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background: #c1edbb;
+			background: #dd5251;
 		}
 
 		input[type="button"]:active,
@@ -1822,7 +1816,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background: #a1cd9b;
+			background: #dd5251;
 		}
 
 		input[type="button"].alt,
@@ -2118,7 +2112,7 @@ input, select, textarea {
 		form input[type="password"]:focus,
 		form select:focus,
 		form textarea:focus {
-			border-color: #a1cd9b;
+			border-color: #dd5251;
 		}
 
 	form input[type="text"],
@@ -2332,7 +2326,7 @@ input, select, textarea {
 		left: 0;
 		z-index: 1000;
 		background-color: rgba(255, 255, 255, 0.95);
-		background-image: url("images/overlay.png");
+		background-image: url("");
 		width: 100%;
 		height: 3.25em;
 		line-height: 3.25em;
@@ -2395,7 +2389,7 @@ input, select, textarea {
 			}
 
 			#nav li.current a {
-				background: #b1ddab;
+				background: #dd5251;
 				color: #fff;
 			}
 
@@ -2461,7 +2455,9 @@ input, select, textarea {
 
 	#banner {
 		position: relative;
-		background-image: url("images/overlay.png"), url("images/overlay.png"), url("../images/banner.jpg");
+		background-image: url("https://wallpaperbrowse.com/media/images/hd-wallpapers-1.jpg"),
+		url("images/overlay.png"),
+		url("../images/banner.jpg");
 		background-position: top left, top left, center center;
 		background-repeat: repeat, repeat, no-repeat;
 		background-size: auto, auto, cover;
@@ -2523,7 +2519,7 @@ input, select, textarea {
 
 	#main {
 		background: #fff;
-		border-top: solid 5px #b1ddab;
+		border-top: solid 5px #dd5251;
 		border-bottom: solid 5px #c1cac5;
 		border-top-width: 35px;
 		border-bottom-width: 10px;
@@ -2797,7 +2793,7 @@ input, select, textarea {
 						position: absolute;
 						left: 0;
 						top: 0;
-						background: #b1ddab;
+						background: #dd5251;
 						width: 44px;
 						height: 44px;
 						content: '\f0c9';
@@ -2808,7 +2804,7 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:active:before {
-						background-color: #a1cd9b;
+						background-color: #dd5251;
 					}
 
 			#navPanel {

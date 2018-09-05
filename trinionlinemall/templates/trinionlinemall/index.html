@@ -1,0 +1,128 @@
+{% extends "trinionlinemall/base.html" %}
+{% block content %}
+{% load staticfiles %}
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-12">
+
+								<!-- Highlight -->
+									<section class="box highlight">
+										<ul class="special">
+											<li><a href="https://www.facebook.com/chicandcheaptt/" class="icon fa-building"> <span class="label">Magnifier</span></a></li>
+											<li><a href="#" class="icon fa-tablet"><span class="label">Tablet</span></a></li>
+											<li><a href="#" class="icon fa-file-photo-o"><span class="label">Flask</span></a></li>
+											<li><a href="#" class="icon fa-cog"><span class="label">Cog?</span></a></li>
+										</ul>
+										<header>
+											<h2>Checkout some of the top businesses</h2>
+											<p>Electronics, Construction, fashion, clothes, etc</p>
+										</header>
+										<p>
+                                            Lets Grow Together Invite Your friends and like us on <a href="https://www.facebook.com/triniplatform/" class="icon fa-facebook">facebook!</a><br />
+											If you Have a Business that and want on the site <span><strong> Contact us!</strong></span>
+										</p>
+									</section>
+
+							</div>
+							<div class="col-12">
+
+								<!-- Features -->
+									<section class="box features">
+										<h2 class="major"><span>Featured Stores </span></h2>
+										<div>
+											<div class="row">
+                                                {% for store in stores.all %}
+												<div class="col-3 col-6-medium col-12-small">
+
+													<!-- Feature -->
+														<section class="box feature">
+															<a href="#" class="image featured"><img src="{{ store.image_link }}" alt="" /></a>
+															<h3><a href="#">{{ store.name }}</a></h3>
+															<p>{{ store.short_description }}</p>
+                                                            <p><strong>{{ store.phone_number}}</strong></p>
+                                                            <small>{{ store.location }}</small>
+                                                            <p> <a href="{{ store.facebook }}" class=" icon fa-facebook-official"></a></p>
+														</section>
+
+												</div>
+                                                {% endfor %}
+
+
+
+
+
+
+												<div class="col-12">
+													<ul class="actions">
+														<li><a href="#" class="button large">Check Electronics</a></li>
+														<li><a href="#" class="button alt large">Check Wedding Planners</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</section>
+
+							</div>
+							<div class="col-12">
+
+								<!-- Blog -->
+									<section class="box blog">
+										<h2 class="major"><span>Latest Posts</span></h2>
+										<div>
+											<div class="row">
+												<div class="col-9 col-12-medium">
+													<div class="content">
+
+														<!-- Featured Post -->
+															<article class="box post">
+																<header>
+																	<h3><a class="badge badge-pill badge-info"  href="{% url 'posts' blog_show.id %}">{{ blog_show.title }}</a></h3>
+																	<p>{{ blog_show.summary }}</p>
+																	<ul class="meta">
+																		<li class="icon fa-clock-o">{{ blog_show.date_only }}</li>
+																		<li class="icon fa-comments"><a href="#">8</a></li>
+																	</ul>
+																</header>
+																<a href="#" class="image featured"><img src="{{ blog_show.image.url }}" alt="" /></a>
+																<p>
+																{{ blog_show.post }}
+																</p>
+																<a href="{% url 'posts' blog_show.id %}" class="button">Continue Reading</a>
+															</article>
+
+													</div>
+												</div>
+												<div class="col-3 col-12-medium">
+													<div class="sidebar">
+
+														<!-- Archives -->
+															<ul class="divided">
+                                                                {% for blog in blogs.all %}
+																<li>
+																	<article class="box post-summary">
+																		<h3><a  class="badge badge-pill badge-info"   href="{% url 'posts' blog.id %}">{{ blog.title }}</a></h3>
+																		<ul class="meta">
+																			<li class="icon fa-clock-o">{{ blog.date_only }}</li>
+																			<li class="icon fa-comments"><a href="#">34</a></li>
+																		</ul>
+																	</article>
+																</li>
+                                                                {% endfor %}
+
+															</ul>
+															<a href="{% url 'all_blogs' %}" class="button alt">Archives</a>
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</section>
+{% endblock %}
+

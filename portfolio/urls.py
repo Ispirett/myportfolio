@@ -28,7 +28,7 @@ urlpatterns = [
     path('about/', jobs.views.about, name='about'),
     path('wordmaniplator/', include('word_manipulator.urls')),
     path('agentaid/', include('agent_aid.urls')),
-    path('accounts/', include('accounts.urls')),
+    path('trinionlinemall/', include('trinionlinemall.urls')),
     path('showcase/', include('showcase.urls')),
 
 
