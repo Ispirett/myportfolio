@@ -30,6 +30,6 @@ urlpatterns = [
     path('agentaid/', include('agent_aid.urls')),
     path('trinionlinemall/', include('trinionlinemall.urls')),
     path('showcase/', include('showcase.urls')),
-
+    path('companies/api/', include('companies.urls'))
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

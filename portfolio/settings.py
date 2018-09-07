@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'companies.apps.CompaniesConfig',
     'showcase.apps.ShowcaseConfig',
     'trinionlinemall.apps.AccountsConfig',
     'agent_aid.apps.AgentAidConfig',
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 
 ]
 
