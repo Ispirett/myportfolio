@@ -27,8 +27,10 @@
     </span>
 
     <ul class="navbar-nav">
+
       <li><a href="#">Home</a></li>
-      <li><a href="{% url 'about' %}">About</a></li>
+
+      <!-- <li><a href="{% url 'about' %}">About</a></li> -->
       <li><a href="#">Services</a></li>
       <a href="{% url 'all_blogs' %}">Blog</a>
       <li><a href="#">Contact</a></li>
@@ -37,8 +39,9 @@
 
   <div id="side-menu" class="side-nav">
     <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+      <img style="width: 200px; padding-left: 30px" src="{% static '/jobs/img/logowhite.png' %}">
     <a href="#">Home</a>
-    <a href="{% url 'about' %}">About</a>
+   <!-- <a href="{% url 'about' %}">About</a> -->
     <a href="#">Services</a>
 
     <a href="#">Contact</a>
@@ -103,12 +106,14 @@
             <div class="row">
                     <div class="six columns">
                         <div class="hero-content">
+                            <img style="width: 200px; padding-left: 5%" src="{% static '/jobs/img/logowhite.png' %}">
                             <h2 id="learn"> <span style="color: #1EAEDB">Ispire</span> Software Solutions</h2>
                                 <p class="tagline"> Have a new Idea that needs Software we are here for you the whole Step of the way!</p>
-                                <form action="#" id="search" method="post" class="form">
+                                <!-- Search bar -->
+                            <!--<form action="#" id="search" method="post" class="form">
                                     <input class="u-full-width" type="text" placeholder="search ideas " id="search-course">
                                     <input type="submit" id="submit-search-course" class="submit-search-course">
-                                </form>
+                                </form> -->
                         </div>
                     </div>
             </div>
@@ -136,7 +141,8 @@
     </div>
 
     <div id="courses-list" class="container">
-        <h1 id="heading" class="heading">Some of our work</h1>
+        <h1 id="heading" class="heading" style=" font-size: 40px ;
+         color: #ffffff; background-image: linear-gradient(90deg , #901a43, #d24f4d); border-radius: 30px; ">Feature Work</h1>
         <div class="row">
             {% for job in my_jobs.all %}
             <div class="four columns" >
