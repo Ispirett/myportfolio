@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'products.apps.ProductsConfig',
     'companies.apps.CompaniesConfig',
     'showcase.apps.ShowcaseConfig',
     'trinionlinemall.apps.AccountsConfig',

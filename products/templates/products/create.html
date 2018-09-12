@@ -1,0 +1,52 @@
+{% extends 'trinionlinemall/base.html' %}
+
+
+{% block header %} Sign UP! {% endblock %}
+
+{% block header_two %} TriniOnlineMall {% endblock %}
+{% block banner %}
+ {% if error %}
+ {{ error }}
+ {% endif %}
+{% endblock %}
+
+{% block banner_two %}
+    Create Products
+{% endblock %}
+
+{% block form %}
+<br/>
+<form  class="container" method="POST"  action="{% url 'create' %}" enctype="multipart/form-data" >
+{% csrf_token %}
+<h6 class="text-white text-left glyphicon-font"> title: </h6>
+<input   class="form-control form-control-lg"  type="text" name="title">
+<br/>
+<h6 class="text-white text-left glyphicon-font"> Link </h6>
+    <textarea   class="form-control form-control-lg"   name="link" rows="5" cols="10" ></textarea>
+<br/>
+<h6 class="text-white text-left glyphicon-font">Description:  </h6>
+    <textarea   class="form-control form-control-lg"   name="description"  rows="5" cols="10"> Enter product information </textarea>
+<br/>
+<h6 class="text-white text-left glyphicon-font"> icon </h6>
+<input  class="form-control form-control-lg "  type="file" name="icon">
+<br/>
+<h6 class="text-white text-left glyphicon-font"> image </h6>
+<input  class="form-control form-control-lg "  type="file" name="image">
+<br/>
+
+<button type="submit" class="btn btn-danger btn-lg btn-block">Add Product</button>
+
+</form>
+
+{% endblock %}
+
+
+
+
+
+
+
+{% block content %}
+
+
+{% endblock %}

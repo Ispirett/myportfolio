@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class ClientsDatabase(models.Model):
@@ -17,6 +18,6 @@ class ClientsDatabase(models.Model):
     MODE_OF_PAYMENT = models.CharField(max_length=100,blank=True)
     PDF = models.FileField(upload_to='pdf/%Y/%m/%d/')
     uploaded_at = models.DateTimeField(auto_now_add=True)
-
+    agent_user = models.ForeignKey(User, on_delete=models.CASCADE)
     def __str__(self):
         return self.NAME
