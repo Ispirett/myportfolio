@@ -8,6 +8,6 @@ urlpatterns = [
 
     # add int url for id for blogs
    path('create/', views.create, name="create"),
-   path('home', views.home, name="home")
+   path('home', views.home, name="producthome")
 ]
 

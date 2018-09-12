@@ -49,6 +49,8 @@
 						<li><a href="#">T&T Photographers</a></li>
 						<li><a href="#">T&T Forums </a></li>
 						<li><a href="#">T&T Cars</a></li>
+                        <li><a href="{%  url 'producthome' %}">T&T Products</a></li>
+                        <li><a href="{% url 'all_blogs' %}">T&T Blogs</a> </li>
                         {% if user.is_authenticated %}
                         <li style="float: right"><a href="javascript:{document.getElementById('logout').submit()}">Logout</a></li>
                         <form id="logout" method="POST" action="{% url 'logout' %}">
