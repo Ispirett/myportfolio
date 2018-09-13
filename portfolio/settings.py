@@ -26,8 +26,11 @@ SECRET_KEY = '1*lcv)bhq1z0-^8qy4qa)imegky4*5%k0nm-g^)_b-unt#51k+'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
+EMAIL_HOST = "smtp.mail.yahoo.com"
+EMAIL_HOST_USER = "ispirett@yahoo.com"
+EMAIL_HOST_PASSWORD ="1234tech"
+EMAIL_PORT = 465
+EMAIL_USE_TLS = True
 # Application definition
 
 INSTALLED_APPS = [

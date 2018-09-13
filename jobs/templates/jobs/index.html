@@ -13,7 +13,7 @@
 							 Have a new Idea that needs Software? </p>
                             <p>we are here for you the whole Step of the way!</p>
 						</header>
-						<span class="image"><img src="http://www.dmu.ac.uk/webimages/Research/Faculties-and-institutes/Cyber-Technology-Institute/City.jpg" alt="" /></span>
+						<span class="image"><img src="http://www.araboverclockers.net/wp-content/uploads/2016/04/ZUK_Z2Pro_art-316x316.jpg" alt="image" /></span>
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>
 				</section>
@@ -132,7 +132,7 @@
 						</div>
 						<footer class="major">
 							<ul class="actions special">
-								<li><a href="#form" class="button scrolly">Go Down</a></li>
+								<li><a href="#one" class="button scrolly">Go Top</a></li>
 							</ul>
 						</footer>
 					</div>
@@ -140,17 +140,23 @@
 
 
 						<!-- Form -->
-							<section id="form" class="container">
+							<!--<section id="form" class="container">
 								<h3>Contact Us! </h3>
-								<form method="POST" action="#">
+								<form method="POST" action="{% url 'homejobs' %}">
+                                    {% csrf_token %}
 									<div class="row gtr-uniform gtr-50">
 										<div class="col-6 col-12-xsmall">
 											<input type="text" name="name" id="name" value="" placeholder="Name" />
 										</div>
+
+                                        <div class="col-6 col-12-xsmall">
+											<input type="text" name="subject" id="subject" value="" placeholder="Subject" />
+										</div>
+
 										<div class="col-6 col-12-xsmall">
 											<input type="email" name="email" id="email" value="" placeholder="Email" />
 										</div>
-										<!--<div class="col-12">
+										<div class="col-12">
 											<select name="category" id="category">
 												<option value="">- Category -</option>
 												<option value="1">Manufacturing</option>
@@ -178,7 +184,7 @@
 										<div class="col-6 col-12-medium">
 											<input type="checkbox" id="human" name="human" checked>
 											<label for="human">I am a human and not a robot</label>
-										</div> -->
+										</div>
 										<div class="col-12">
 											<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
 										</div>
@@ -190,7 +196,7 @@
 										</div>
 									</div>
 								</form>
-							</section>
+							</section> -->
 
 
 

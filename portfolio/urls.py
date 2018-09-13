@@ -23,7 +23,7 @@ import jobs.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', jobs.views.home, name='home'),
+    path('', jobs.views.home, name='homejobs'),
     path('blog/', include('blog.urls')),
     path('about/', jobs.views.about, name='about'),
     path('wordmaniplator/', include('word_manipulator.urls')),

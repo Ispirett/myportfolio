@@ -14,7 +14,7 @@ def signup (request):
                 # if username in database is equal to entered user name, then return error.
                 User.objects.get(username=request.POST['username'])
             return render(request, "trinionlinemall/signup.html", {'error': 'Sorry username is all ready taken!'})
-         # add user to database
+         # add user to database*****-
         except User.DoesNotExist:
             user = User.objects.create_user(request.POST['username'], password=request.POST['password1'])
             auth.login(request, user)
