@@ -52,7 +52,9 @@
                         <li><a href="{%  url 'producthome' %}">T&T Products</a></li>
                         <li><a href="{% url 'all_blogs' %}">T&T Blogs</a> </li>
                         {% if user.is_authenticated %}
-                        <li style="float: right"><a href="javascript:{document.getElementById('logout').submit()}">Logout</a></li>
+
+                        <li style="float: right"><a href="javascript:{document.getElementById('logout').submit()}">Logout<span class="fa fa-sign-out"></span></a></li>
+                         <li style="float: right"><a href="{% url 'create' %}">Create New Product  <span class="fa fa-bank"></span></a></li>
                         <form id="logout" method="POST" action="{% url 'logout' %}">
                         {% csrf_token %}
                         <input type="hidden">

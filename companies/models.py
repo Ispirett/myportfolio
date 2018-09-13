@@ -24,6 +24,11 @@ class Stores (models.Model):
     def __str__(self):
         return self.name
 
+    def short_description(self):
+        return self.description[:100]
+
+
+
 class StoreOwners (models.Model):
     name = models.CharField(max_length=50)
     # this allows me to connect many stores to one owner

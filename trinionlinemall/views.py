@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import auth
 from django.http import HttpResponse
-from trinionlinemall.models import Stores
+from companies.models import Stores
 from blog.models import Blog
 from blog.views import posts
 
