@@ -18,30 +18,34 @@
     <div class="col-12">
 
                 <!-- Features -->
+                  {% for company_l in company_list %}
                     <section class="box features page-content">
-                        <h2 class="major"><span>All Products</span></h2>
+
+                        <h2 class="major"><span>{{company_l.name}}</span></h2>
+
                         <div>
                             <div class="row">
-                                {% for product in products %}
-                                <div class="col-3 col-6-medium col-12-small">
 
+                                <div class="col-3 col-6-medium col-12-small">
+                                 {% for company in company_l.get_store %}
                                     <!-- Feature -->
                                         <section class="box feature">
-                                            <a href="#" class="image featured"><img src="{{ product.image.url }}" alt="product image" /></a>
-                                            <h3><a href="{% url 'product_detail' product.id %}">{{product.title }}</a></h3>
-                                            <p><a href="{% url 'product_detail' product.id %}">User: {{product.user_hunter.username }}</a></p>
+                                            <a href="{% url 'company_details' company.id %}" class="image featured"><img src="{{company.image_link}}" alt="product image" /></a>
+                                            <h3><a href="{% url 'company_details' company.id %}">{{company.name }}</a></h3>
+                                            <p><a href="{% url 'company_details' company.id %}">Phone: {{company.phone_number}}</a></p>
                                             <p>
-                                               {{ product.summary }}
+                                               {{ company.short_description}}
                                             </p>
                                             	<ul class="meta">
-                                                    <li class="icon fa-clock-o">{{ product.publication_date }}</li>
+                                                    <li class="icon fa-clock-o">{{ company.location }}</li>
                                                     <!--<li class="icon fa-comments"><a href="#">34</a></li>-->
-                                                    <li class="icon fa-circle-o-notch"><a href="#">{{product.votes  }}</a></li>
+                                                    <li class="icon fa-circle-o-notch"><a href="#">{{company.phone_number }}</a></li>
                                                 </ul>
 
                                         </section>
 
-                                </div>
+                                       </div>
+                                     {% endfor %}
                                 {% endfor %}
 
                             </div>

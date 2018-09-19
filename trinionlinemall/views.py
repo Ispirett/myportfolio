@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import auth
 from django.http import HttpResponse
-from companies.models import Stores
+from companies.models import Stores, StoreCatagory
 from blog.models import Blog
 from blog.views import posts
 
@@ -48,9 +48,13 @@ def logout (request):
 def home(request):
 
     stores = Stores.objects
+    stores_catagory = StoreCatagory.objects.all()
     blog = Blog.objects
-    blog_show = Blog.objects.get(id=1)
-    return render(request, 'trinionlinemall/index.html', {'stores': stores, 'blogs': blog , 'blog_show': blog_show})
+    blog_show = Blog.objects.all()[:1]
+    return render(request, 'trinionlinemall/index.html', {'stores': stores, 'blogs': blog ,
+                                                          'blog_show': blog_show,
+                                                          'store_catagory': stores_catagory})
+
 
 
 

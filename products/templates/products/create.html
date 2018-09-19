@@ -18,24 +18,27 @@
 <br/>
 <form  class="container" method="POST"  action="{% url 'create' %}" enctype="multipart/form-data" >
 {% csrf_token %}
-<h6 class="text-white text-left glyphicon-font"> title: </h6>
-<input   class="form-control form-control-lg"  type="text" name="title">
+
+
+        <h4 class="text-white text-left glyphicon-font"> title: </h4>
+        <input   class="form-control form-control-lg"  type="text" name="title">
+
 <br/>
-<h6 class="text-white text-left glyphicon-font"> Link </h6>
+<h4 class="text-white text-left glyphicon-font"> Your facebook Link </h4>
     <textarea   class="form-control form-control-lg"   name="link" rows="5" cols="10" ></textarea>
 <br/>
-<h6 class="text-white text-left glyphicon-font">Description:  </h6>
-    <textarea   class="form-control form-control-lg"   name="description"  rows="5" cols="10"> Enter product information </textarea>
+<h4 class="text-white text-left glyphicon-font">Product Description:  </h4>
+    <textarea   class="form-control form-control-lg"   name="description"  rows="5" cols="10"> </textarea>
 <br/>
-<h6 class="text-white text-left glyphicon-font"> icon </h6>
+<h4 class="text-white text-left glyphicon-font"> icon </h4>
 <input  class="form-control form-control-lg "  type="file" name="icon">
 <br/>
-<h6 class="text-white text-left glyphicon-font"> image </h6>
+<h4 class="text-white text-left glyphicon-font"> image </h4>
 <input  class="form-control form-control-lg "  type="file" name="image">
 <br/>
-
-<button type="submit" class="btn btn-danger btn-lg btn-block">Add Product</button>
-
+<br/>
+<button type="submit" class="btn  btn-lg btn-block">Add Product</button>
+</div>
 </form>
 
 {% endblock %}

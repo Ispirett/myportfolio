@@ -44,7 +44,7 @@
                                                             <p><strong>{{ store.phone_number}}</strong></p>
                                                             <small>{{ store.location }}</small>
                                                             <p> <a href="{{ store.facebook }}" class=" icon fa-facebook-official"></a></p>
-														</section>
+                                                        </section>
 
 												</div>
                                                 {% endfor %}
@@ -76,6 +76,7 @@
 													<div class="content">
 
 														<!-- Featured Post -->
+                                                        {%for blog_show in blog_show %}
 															<article class="box post">
 																<header>
 																	<h3><a class="badge badge-pill badge-info"  href="{% url 'posts' blog_show.id %}">{{ blog_show.title }}</a></h3>
@@ -91,7 +92,7 @@
 																</p>
 																<a href="{% url 'posts' blog_show.id %}" class="button">Continue Reading</a>
 															</article>
-
+                                                        {% endfor %}
 													</div>
 												</div>
 												<div class="col-3 col-12-medium">

@@ -19,6 +19,8 @@ router.register('stores',views.StoreView)
 router.register('storescatagory',views.StoreCatatgoryView)
 router.register('storeowners',views.StoreOwnersView)
 urlpatterns = [
-     path('', include(router.urls))
-
+     path('', include(router.urls)),
+     path('home/',views.company_home,name="company_home"),
+     path('<int:company_id>', views.company_details, name="company_details"),
+     path('list/', views.company_list, name="company_list"),
 ]

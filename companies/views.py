@@ -39,3 +39,25 @@ class StoreOwnersView(viewsets.ModelViewSet):
     queryset = StoreOwners.objects.all()
 
     serializer_class = StoreOwnerSerializer
+
+
+
+
+def company_home(request):
+
+    companies = Stores.objects.all()
+    company_catagory = StoreCatagory.objects.all()
+    return render(request, 'comapnies/company_home.html', {'companies': companies, 'company_cata': company_catagory})
+
+
+# details
+def company_details(request, company_id):
+    company = get_object_or_404(Stores, pk=company_id)
+    companies = Stores.objects.all()[:10]
+    return render(request, 'comapnies/company_details.html', {'company': company, 'companies': companies})
+
+def company_list(request):
+
+    company_list = StoreCatagory.objects.all()
+    return render(request,'comapnies/company_list.html', {'company_list': company_list} )
+
