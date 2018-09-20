@@ -1,7 +1,7 @@
 {% extends "trinionlinemall/base.html" %}
 {% load staticfiles %}
 {% block banner %}
- All Products
+ All Businesses
 {% endblock %}
 
 
@@ -18,16 +18,15 @@
     <div class="col-12">
 
                 <!-- Features -->
-                  {% for company_l in company_list %}
                     <section class="box features page-content">
 
-                        <h2 class="major"><span>{{company_l.name}}</span></h2>
+                           <a id="catagory" href=""> <h2 class="major"><span>All Businesses</span></h2> </a>
 
                         <div>
                             <div class="row">
-
+                                {% for company in companies %}
                                 <div class="col-3 col-6-medium col-12-small">
-                                 {% for company in company_l.get_store %}
+
                                     <!-- Feature -->
                                         <section class="box feature">
                                             <a href="{% url 'company_details' company.id %}" class="image featured"><img src="{{company.image_link}}" alt="product image" /></a>
@@ -44,8 +43,7 @@
 
                                         </section>
 
-                                       </div>
-                                     {% endfor %}
+                                </div>
                                 {% endfor %}
 
                             </div>
@@ -56,20 +54,6 @@
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

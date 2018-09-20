@@ -38,6 +38,7 @@
 																<li class="icon fa-clock-o">{{ company.phone_number  }}</li>
 																<!--<li class="icon fa-comments"><a href="#">34</a></li>-->
                                                                 <li class="icon fa-circle-o-notch"><a href="{% url 'company_details' company.id %}">{{ company.location  }}</a></li>
+
 															</ul>
 
 														</article>
@@ -45,7 +46,7 @@
                                                     {% endfor %}
 
 												</ul>
-												<a href="{% url 'producthome' %}" class="button alt">Archives</a>
+												<a href="{% url 'company_home' %}" class="button alt">Archives</a>
 											</section>
 
 
@@ -62,9 +63,9 @@
 											<header>
 												<h2>{{ company.name }}</h2>
                                                 <p>Business Catagory: {{ company.store_catagory}}</p>
-                                                <p>Contact:{{ company.phone_number}} </p>
-                                                <p>Company:{{ company.location}} </p>
-
+                                                <p>Contact: {{ company.phone_number}} </p>
+                                                <p>Company: {{ company.location}} </p>
+                                                <p class="icon fa-facebook-official"><a href="{{ company.facebook }}">facebook</a></p>
 												<!--<ul class="meta">
 													<li class="icon fa-clock-o">{{ company.phone_number}}</li>
 													<li class="icon fa-comments"><a href="#">1,024</a></li>
@@ -75,6 +76,7 @@
 											</header>
 
 											<section>
+
 												<span class="image featured"><img src="{{company.image_link }}" alt="product image" /></span>
 												<p>
                                                     <em>{{ company.description}}</em>

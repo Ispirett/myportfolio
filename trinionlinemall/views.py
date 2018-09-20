@@ -47,13 +47,12 @@ def logout (request):
 
 def home(request):
 
-    stores = Stores.objects
-    stores_catagory = StoreCatagory.objects.all()
+
+    store = Stores.objects.all()[:10]
     blog = Blog.objects
     blog_show = Blog.objects.all()[:1]
-    return render(request, 'trinionlinemall/index.html', {'stores': stores, 'blogs': blog ,
-                                                          'blog_show': blog_show,
-                                                          'store_catagory': stores_catagory})
+    return render(request, 'trinionlinemall/index.html', {'blogs': blog ,
+                                                          'blog_show': blog_show, 'stores':store})
 
 
 

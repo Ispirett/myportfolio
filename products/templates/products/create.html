@@ -22,23 +22,37 @@
 
         <h4 class="text-white text-left glyphicon-font"> title: </h4>
         <input   class="form-control form-control-lg"  type="text" name="title">
+            <br/>
 
-<br/>
-<h4 class="text-white text-left glyphicon-font"> Your facebook Link </h4>
-    <textarea   class="form-control form-control-lg"   name="link" rows="5" cols="10" ></textarea>
-<br/>
-<h4 class="text-white text-left glyphicon-font">Product Description:  </h4>
-    <textarea   class="form-control form-control-lg"   name="description"  rows="5" cols="10"> </textarea>
-<br/>
-<h4 class="text-white text-left glyphicon-font"> icon </h4>
-<input  class="form-control form-control-lg "  type="file" name="icon">
-<br/>
-<h4 class="text-white text-left glyphicon-font"> image </h4>
-<input  class="form-control form-control-lg "  type="file" name="image">
-<br/>
-<br/>
-<button type="submit" class="btn  btn-lg btn-block">Add Product</button>
-</div>
+            <!-- <h4 class="text-white text-left glyphicon-font"> Catagory</h4>
+             <select name="catagory">
+                 <option value="Miscellaneous" >Miscellaneous</option>
+                 <option value="Electronics">Electronics</option>
+                 <option value="Auto Parts and Vehicles">Auto Parts and Vehicles</option>
+                 <option value="Entertainment">Entertainment</option>
+                 <option value="Home & Garden">Home & Garden</option>
+            </select> -->
+
+        <h4 class="text-white text-left glyphicon-font"> Price </h4>
+        <input   class="form-control form-control-lg"  type="number" step="1" min="0" name="price" placeholder="$">
+            <br/>
+            <br/>
+            <h4 class="text-white text-left glyphicon-font"> Your facebook Link </h4>
+                <textarea   class="form-control form-control-lg"   name="link" rows="5" cols="10" ></textarea>
+            <br/>
+            <h4 class="text-white text-left glyphicon-font">Product Description:  </h4>
+                <textarea placeholder="Describe Product"  class="form-control form-control-lg"   name="description"  rows="5" cols="10"> </textarea>
+            <br/>
+            <h4 class="text-white text-left glyphicon-font"> icon </h4>
+            <input  class="form-control form-control-lg "  type="file" name="icon">
+            <br/>s
+            <h4 class="text-white text-left glyphicon-font"> image </h4>
+            <input  class="form-control form-control-lg "  type="file" name="image">
+            <br/>
+
+            <br/>
+            <button type="submit" class="btn  btn-lg btn-block">Add Product</button>
+
 </form>
 
 {% endblock %}

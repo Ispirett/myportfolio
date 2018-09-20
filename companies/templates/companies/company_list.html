@@ -1,7 +1,7 @@
 {% extends "trinionlinemall/base.html" %}
 {% load staticfiles %}
 {% block banner %}
- All Products
+ Businesses
 {% endblock %}
 
 
@@ -18,13 +18,14 @@
     <div class="col-12">
 
                 <!-- Features -->
+
                     <section class="box features page-content">
-                       {% for cata in company_cata %}
-                           <a href="{% url 'company_list' %}"> <h2 class="major"><span>{{ cata}}</span></h2> </a>
-                    {% endfor %}
+
+                        <h2 class="major"><span>Businesses</span></h2>
+
                         <div>
                             <div class="row">
-                                {% for company in companies %}
+                             {% for company in company_list %}
                                 <div class="col-3 col-6-medium col-12-small">
 
                                     <!-- Feature -->
@@ -43,7 +44,8 @@
 
                                         </section>
 
-                                </div>
+                                       </div>
+
                                 {% endfor %}
 
                             </div>

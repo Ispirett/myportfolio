@@ -47,17 +47,39 @@ def company_home(request):
 
     companies = Stores.objects.all()
     company_catagory = StoreCatagory.objects.all()
-    return render(request, 'comapnies/company_home.html', {'companies': companies, 'company_cata': company_catagory})
+    return render(request, 'companies/company_home.html', {'companies': companies, 'company_cata': company_catagory})
 
 
 # details
 def company_details(request, company_id):
     company = get_object_or_404(Stores, pk=company_id)
     companies = Stores.objects.all()[:10]
-    return render(request, 'comapnies/company_details.html', {'company': company, 'companies': companies})
+    return render(request, 'companies/company_details.html', {'company': company, 'companies': companies})
 
-def company_list(request):
+class CompanyList:
 
-    company_list = StoreCatagory.objects.all()
-    return render(request,'comapnies/company_list.html', {'company_list': company_list} )
+    def electronics(request):
 
+        company_list = Stores.objects.filter(store_catagory__name='Electronics')
+        return render(request, 'companies/company_list.html', {'company_list': company_list})
+
+    def weddings(request):
+        company_list = Stores.objects.filter(store_catagory__name='Weddings')
+        return render(request, 'companies/company_list.html', {'company_list': company_list})
+
+
+    def construction(request):
+        company_list = Stores.objects.filter(store_catagory__name='Construction')
+        return render(request, 'companies/company_list.html', {'company_list': company_list})
+
+    def photographers(request):
+        company_list = Stores.objects.filter(store_catagory__name='Photographers')
+        return render(request, 'companies/company_list.html', {'company_list': company_list})
+
+    def cars(request):
+        company_list = Stores.objects.filter(store_catagory__name='Cars')
+        return render(request, 'companies/company_list.html', {'company_list': company_list})
+
+    def beauty(request):
+        company_list = Stores.objects.filter(store_catagory__name='Beauty')
+        return render(request, 'companies/company_list.html', {'company_list': company_list})

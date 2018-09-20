@@ -34,11 +34,12 @@
 													<li>
 														<article class="box post-summary">
 															<h3><a href="{{ product.id }}">{{ product.title }}</a></h3>
-															<ul class="meta">
-																<li class="icon fa-clock-o">{{ product.publication_date }}</li>
+															<ul class="meta ">
+																<li class="icon fa-clock-o">{{ product.publication_date }}</li><br/>
 																<!--<li class="icon fa-comments"><a href="#">34</a></li>-->
-                                                                <li class="icon fa-circle-o-notch"><a href="#">{{product_detail.votes  }}</a></li>
-															</ul>
+                                                                <li   class="icon fa-circle-o-notch"><a href="#">{{product_detail.votes  }}</a></li>
+															    <li style="padding: 10px" class="icon fa-money " style="color: green" ><a style="color: #3caf42" href=""> ${{product.price  }}</a></li>
+                                                            </ul>
 
 														</article>
 													</li>
@@ -70,6 +71,7 @@
 													<!--<li class="icon fa-comments"><a href="#">1,024</a></li> -->
                                                     <span style="color: #51e257"> <li class="icon fa-arrow-up"><a href="javascript:{document.getElementById('upvote').submit()}">Vote Up</a></li></span>
                                                     <li class="icon fa-circle-o-notch"><a href="#">{{product_detail.votes  }}</a></li>
+                                                    <li class="icon fa-money " style="color: green" ><a style="color: #3caf42" href=""> ${{product_detail.price  }}</a></li>
                                                     <span style="color: red"> <li class="icon fa-arrow-down"><a href="javascript:{downVote()}">Vote Down</a></li></span>
 												</ul>
 											</header>

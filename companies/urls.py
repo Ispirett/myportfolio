@@ -22,5 +22,11 @@ urlpatterns = [
      path('', include(router.urls)),
      path('home/',views.company_home,name="company_home"),
      path('<int:company_id>', views.company_details, name="company_details"),
-     path('list/', views.company_list, name="company_list"),
+     path('electronics/', views.CompanyList.electronics, name="electronics"),
+     path('weddings/', views.CompanyList.weddings, name="weddings"),
+     path('construction/', views.CompanyList.construction, name="construction"),
+     path('photographers/', views.CompanyList.photographers, name="photographers"),
+     path('cars/', views.CompanyList.cars, name="cars"),
+     path('beauty/', views.CompanyList.beauty, name="beauty"),
+
 ]

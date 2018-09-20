@@ -10,14 +10,15 @@
 								<!-- Highlight -->
 									<section class="box highlight">
 										<ul class="special">
-											<li><a href="https://www.facebook.com/chicandcheaptt/" class="icon fa-building"> <span class="label">Magnifier</span></a></li>
-											<li><a href="#" class="icon fa-tablet"><span class="label">Tablet</span></a></li>
-											<li><a href="#" class="icon fa-file-photo-o"><span class="label">Flask</span></a></li>
-											<li><a href="#" class="icon fa-cog"><span class="label">Cog?</span></a></li>
+											<li><a href="{% url 'construction' %}" class="icon fa-building"> <span class="label">Magnifier</span></a></li>
+											<li><a href="{% url 'electronics' %}" class="icon fa-tablet"><span class="label">Tablet</span></a></li>
+											<li><a href="{% url 'photographers' %}" class="icon fa-camera"><span class="label">Camera</span></a></li>
+											<li><a href="{% url 'weddings' %}" class="icon fa-birthday-cake"><span class="label">Ring?</span></a></li>
 										</ul>
 										<header>
+                                            <h2>Site is in beta</h2>
 											<h2>Checkout some of the top businesses</h2>
-											<p>Electronics, Construction, fashion, clothes, etc</p>
+											<p>Electronics, Construction, Wedding Planners, photographers , etc</p>
 										</header>
 										<p>
                                             Lets Grow Together Invite Your friends and like us on <a href="https://www.facebook.com/triniplatform/" class="icon fa-facebook">facebook!</a><br />
@@ -37,9 +38,9 @@
 												<div class="col-3 col-6-medium col-12-small">
 
 													<!-- Feature -->
-														<section class="box feature">
-															<a href="#" class="image featured"><img src="{{ store.image_link }}" alt="store image" /></a>
-															<h3><a href="#">{{ store.name }}</a></h3>
+														<section class="box feature" style="box-shadow: 0 30px 30px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); padding:20px ">
+															<a href="{% url 'company_home' %}" class="image featured"><img src="{{ store.image_link }}" alt="store image" /></a>
+															<h3><a href="{% url 'company_home' %}">{{ store.name }}</a></h3>
 															<p>{{ store.short_description }}</p>
                                                             <p><strong>{{ store.phone_number}}</strong></p>
                                                             <small>{{ store.location }}</small>
@@ -56,8 +57,8 @@
 
 												<div class="col-12">
 													<ul class="actions">
-														<li><a href="#" class="button large">Check Electronics</a></li>
-														<li><a href="#" class="button alt large">Check Wedding Planners</a></li>
+														<li><a href="{% url 'electronics' %}" class="button large">Check Electronics</a></li>
+														<li><a href="{% url 'weddings' %}" class="button alt large">Check Wedding Planners</a></li>
 													</ul>
 												</div>
 											</div>

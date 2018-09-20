@@ -46,7 +46,7 @@ def product_detail(request, product_id):
     product = get_object_or_404(Products, pk=product_id)
     return render(request,'products/product_details.html', {'product_detail': product, 'recent_products': recent_products})
 
-@login_required
+@login_required(login_url='trinionlinemall/signup/')
 def upvote (request, product_id):
     if request.method == "POST":
          product = get_object_or_404(Products, pk=product_id)
