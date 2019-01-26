@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1*lcv)bhq1z0-^8qy4qa)imegky4*5%k0nm-g^)_b-unt#51k+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 EMAIL_HOST = "smtp.mail.yahoo.com"
@@ -60,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
@@ -90,7 +91,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'portfoliodb',
-        'USER': 'postgres',
+        'USER': 'ispire',
         'PASSWORD': '1234tech',
         'HOST': 'localhost',
         'PORT': '5432',
@@ -149,8 +150,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # the _URl can me any name
 MEDIA_URL = os.path.join(BASE_DIR,'/media/')
 
-try:
+"""try:
     from .local_settings import *
 except ImportError:
-    pass
+    pass"""
+
+
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
